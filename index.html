@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>Generator Skill</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="kotak-mesin">
+            <h1>Generator Skill Unik</h1>
+
+            <p>
+                Masukkan nama untuk
+                melihat skill tersembunyimu!
+            </p>
+
+            <input
+                type="text"
+                id="namaInput"
+                placeholder="Ketik namamu..."
+            >
+
+            <button onclick="cekSkill()">
+                Cek Sekarang!
+            </button>
+
+            <h2 id="hasilSkill">
+                Skill belum terdeteksi...
+            </h2>
+            <img
+                id="fotoSkill"
+                src="https://placehold.co/200x200?text=?"
+                 width=“400"
+ >
+        </div>
+
+        <script>
+            function cekSkill() {
+                let nama = document.getElementById("namaInput").value;
+
+                let daftarSkill = [
+                    "tendang jumpa fans",
+                    "An IQ To High",
+                    "Penghapus hotspot",
+                    "pistol bbm",
+                    "penghitaman masal"
+                ];
+                let daftarGambar = [
+                    "https://www.google.com/imgres?q=tendangan%20bola%20ke%20langit&imgurl=https%3A%2F%2Flookaside.instagram.com%2Fseo%2Fgoogle_widget%2Fcrawler%2F%3Fmedia_id%3D3678600773218211500&imgrefurl=https%3A%2F%2Fwww.instagram.com%2Fp%2FDMNA-nGJhas%2F&docid=jj9NND0_rO5T2M&tbnid=dMUDmphBe82V0M&vet=12ahUKEwjj4ZPhw4GYAxX3xzgGHYEVM7sQnPAOegUI1gQQAA..i&w=1080&h=1080&hcb=2&ved=2ahUKEwjj4ZPhw4GYAxX3xzgGHYEVM7sQnPAOegUI1gQQAA",
+                    "https://www.google.com/imgres?q=an%20iq%20too%20high&imgurl=https%3A%2F%2Fmedia.tenor.com%2FK-mqvEWabwQAAAAe%2Fiq-iq-too-high.png&imgrefurl=https%3A%2F%2Ftenor.com%2Fid%2Fview%2Fiq-iq-too-high-an-iq-too-high-iq-bird-gif-3164247938802806532&docid=EJMoxke1_kiAqM&tbnid=WBfrpxnsuKIT_M&vet=12ahUKEwiOiv6uxIGYAxWNxzgGHROrLu8QnPAOegQIPhAA..i&w=390&h=210&hcb=2&ved=2ahUKEwiOiv6uxIGYAxWNxzgGHROrLu8QnPAOegQIPhAA",
+                    "https://www.google.com/imgres?q=pot%20hotspot&imgurl=https%3A%2F%2Fstatic.wikitide.net%2Fwalawepediawiki%2F0%2F03%2FPot-hotspot-11423272ba914df0ffa4fa7e0616b1bd.webp&imgrefurl=https%3A%2F%2Fwalawepedia.miraheze.org%2Fwiki%2FPot_Hotspot&docid=TkxEa0A4RqkNtM&tbnid=AdmQDUraKPvy9M&vet=12ahUKEwjV_r3fxIGYAxVpxTgGHbevF5UQnPAOegQIOhAA..i&w=1080&h=1192&hcb=2&ved=2ahUKEwjV_r3fxIGYAxVpxTgGHbevF5UQnPAOegQIOhAA",
+                    "https://www.google.com/imgres?q=bbm&imgurl=https%3A%2F%2Fmenpan.go.id%2Flegacy%2Fimages%2Fberita%2F2024%2F20241001_-_Pertamina_Resmi_Turunkan_Harga_BBM_Non-Subsidi_per_1_Oktober_2024_di_Seluruh_Indonesia.jpeg&imgrefurl=https%3A%2F%2Fmenpan.go.id%2Fposts%2Fpertamina-resmi-turunkan-harga-bbm-non-subsidi-per-1-oktober-2024-di-seluruh-indonesia&docid=v1hGCqNtGdRC6M&tbnid=jKmMv-bYIpTFWM&vet=12ahUKEwiIqcDoxIGYAxUA4TgGHTgnLqwQnPAOegUIgAEQAA..i&w=2560&h=1706&hcb=2&ved=2ahUKEwiIqcDoxIGYAxUA4TgGHTgnLqwQnPAOegUIgAEQAA",
+                    "https://www.google.com/imgres?q=penghitaman%20massal&imgurl=https%3A%2F%2Fmonsterjournal.com%2Fwp-content%2Fuploads%2F2025%2F03%2F474484516_1283460909621655_8788499432131474613_n-1.jpg&imgrefurl=https%3A%2F%2Fmonsterjournal.com%2Fpenghitaman-karakter-animanga-di-dunia-barat-dan-indonesia-apa-bedanya%2F&docid=zVulx_o2Em2BxM&tbnid=iqtgmwsJgINguM&vet=12ahUKEwjPiKn5xIGYAxVP1jgGHeWnGgUQnPAOegQIOxAA..i&w=715&h=402&hcb=2&ved=2ahUKEwjPiKn5xIGYAxVP1jgGHeWnGgUQnPAOegQIOxAA",
+                ];
+
+                let acak = Math.floor(Math.random() * daftarSkill.length);
+
+                let skillPilihan = daftarSkill[acak];
+
+                let gambarPilihan = daftarGambar[acak];
+
+                document.getElementById("hasilSkill").innerText =
+                    nama + ", skill unikmu: " + skillPilihan;
+                document.getElementById("fotoSkill").src = gambarPilihan;
+
+            }
+        </script>
+    </body>
+</html>
